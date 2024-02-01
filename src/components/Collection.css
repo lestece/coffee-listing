@@ -1,0 +1,29 @@
+.Main {
+  margin: 0 auto;
+  width: 45%;
+  background-color: #1b1d1f;
+  background-image: url("../assets/vector.svg");
+  background-repeat: no-repeat;
+  background-position-y: 3rem;
+  background-position-x: right;
+  padding: 5rem;
+  margin-top: 10rem;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 2rem !important;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 1rem !important;
+  color: #6f757c;
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import "./Collection.css";
 
 export default function Collection() {
   const [coffees, setCoffees] = useState([]);
@@ -26,10 +27,15 @@ export default function Collection() {
     setCoffees(available);
   };
   return (
-    <div>
-      <h1>Coffee list</h1>
-      <button onClick={fetchAllCoffees}>All</button>
-      <button onClick={availableCoffees}>Available Only</button>
+    <div className="Main">
+      <h1>Our Collection</h1>
+      <p>
+        Introducing our Coffee Collection, a selection of unique coffees from
+        different roast types and origins, expertly roasted in small batches and
+        shipped fresh weekly.
+      </p>
+      <button onClick={fetchAllCoffees}>All Products</button>
+      <button onClick={availableCoffees}>Available Now</button>
       <ul>
         {coffees.map((coffee) => {
           return (
