@@ -34,8 +34,11 @@ export default function Collection() {
         different roast types and origins, expertly roasted in small batches and
         shipped fresh weekly.
       </p>
-      <button onClick={fetchAllCoffees}>All Products</button>
-      <button onClick={availableCoffees}>Available Now</button>
+      <div className="Btns-container">
+        <button onClick={fetchAllCoffees}>All Products</button>
+        <button onClick={availableCoffees}>Available Now</button>
+      </div>
+
       <ul>
         {coffees.map((coffee) => {
           return (

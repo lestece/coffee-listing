@@ -1,12 +1,12 @@
 .Main {
   margin: 0 auto;
-  width: 45%;
+  width: 65%;
   background-color: #1b1d1f;
   background-image: url("../assets/vector.svg");
   background-repeat: no-repeat;
   background-position-y: 3rem;
   background-position-x: right;
-  padding: 5rem;
+  padding: 5rem 1.5rem;
   margin-top: 10rem;
   border-radius: 20px;
 }
@@ -26,4 +26,16 @@ li {
 p {
   font-size: 1rem !important;
   color: #6f757c;
+}
+
+.Btns-container {
+  margin: 2rem 0 3rem;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  color: #fef7ee;
+  background-color: #6f757c !important;
 }
