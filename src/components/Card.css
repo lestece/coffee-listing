@@ -1,0 +1,58 @@
+.Card-container {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+.Popular {
+  width: 2.5rem;
+  color: #1b1d1f;
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem;
+  font-size: 10px !important;
+  font-weight: bolder !important;
+  background-color: #f6c768;
+  position: absolute;
+  top: 0px;
+  left: 6px;
+}
+
+.Name-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Name-price h2 {
+  font-size: 1rem !important;
+}
+
+.Name-price p {
+  background-color: #bee3cc;
+  border-radius: 5px;
+  color: #1b1d1f;
+  font-size: 12px !important;
+  padding: 3px 8px;
+}
+
+.Rating-availability {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Rating-votes,
+.Soldout {
+  font-size: 14px !important;
+}
+
+.Rating {
+  color: #fef7ee;
+}
+
+.Soldout {
+  color: #ed735d;
+}
