@@ -9,32 +9,36 @@ export default function Collection() {
 
   //Run fetchCoffees function when page loads
   useEffect(() => {
-    fetchCoffees();
+    fetchAllCoffees();
   }, []);
 
   //we use async/await to fetch the coffee
-  const fetchCoffees = async () => {
+  const fetchAllCoffees = async () => {
     const response = await fetch(
       "https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json"
     );
     //store the data into the coffees variable
     setCoffees(await response.json());
   };
+  //filter coffees by availability
+  const availableCoffees = () => {
+    const available = coffees.filter((coffee) => coffee.available == true);
+    setCoffees(available);
+  };
   return (
     <div>
       <h1>Coffee list</h1>
+      <button onClick={fetchAllCoffees}>All</button>
+      <button onClick={availableCoffees}>Available Only</button>
       <ul>
         {coffees.map((coffee) => {
           return (
             <li key={coffee.id}>
-              <h1>{coffee.name}</h1>
+              <Card coffee={coffee} />
             </li>
           );
         })}
       </ul>
-      <Card />
-      <Card />
-      <Card />
     </div>
   );
 }

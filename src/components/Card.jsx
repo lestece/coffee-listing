@@ -1,3 +1,3 @@
-export default function Card() {
-  return <div>Coffee card</div>;
+export default function Card({ coffee }) {
+  return <div>{coffee.name}</div>;
 }
