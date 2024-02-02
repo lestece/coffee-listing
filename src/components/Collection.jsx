@@ -6,6 +6,9 @@ export default function Collection() {
   const [coffees, setCoffees] = useState([]);
   console.log(coffees);
 
+  //toggle active class on button
+  const [selected, setSelected] = useState("btn1");
+
   //https://medium.com/@64rohanmalo/fetch-and-display-data-from-an-api-with-react-228de56bb446
 
   //Run fetchCoffees function when page loads
@@ -26,6 +29,14 @@ export default function Collection() {
     const available = coffees.filter((coffee) => coffee.available == true);
     setCoffees(available);
   };
+
+  //toggle active class based on what button is clicked
+  // inspired by the followinf sandbox:
+  //https://codesandbox.io/p/sandbox/priceless-tamas-yjr1lw?file=%2Fsrc%2FSome.js%3A24%2C16
+  const changeColor = (btn) => {
+    setSelected(btn);
+  };
+
   return (
     <div className="Main">
       <h1>Our Collection</h1>
@@ -35,8 +46,26 @@ export default function Collection() {
         shipped fresh weekly.
       </p>
       <div className="Btns-container">
-        <button onClick={fetchAllCoffees}>All Products</button>
-        <button onClick={availableCoffees}>Available Now</button>
+        <button
+          id="btn1"
+          onClick={() => {
+            fetchAllCoffees();
+            changeColor("btn1");
+          }}
+          className={selected === "btn1" ? "Active" : ""}
+        >
+          All Products
+        </button>
+        <button
+          id="btn2"
+          onClick={() => {
+            availableCoffees();
+            changeColor("btn2");
+          }}
+          className={selected === "btn2" ? "Active" : ""}
+        >
+          Available Now
+        </button>
       </div>
 
       <ul>
