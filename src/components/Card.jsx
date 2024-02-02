@@ -25,7 +25,6 @@ export default function Card({ coffee }) {
             votes)
           </p>
         )}
-
         {coffee.available == false ? <p className="Soldout">Sold out</p> : ""}
       </div>
     </div>

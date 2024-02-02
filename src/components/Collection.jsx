@@ -6,11 +6,10 @@ export default function Collection() {
   const [coffees, setCoffees] = useState([]);
   console.log(coffees);
 
-  //toggle active class on button
+  //set selected state on btn 1 to have the Active class  by deafult
   const [selected, setSelected] = useState("btn1");
 
   //https://medium.com/@64rohanmalo/fetch-and-display-data-from-an-api-with-react-228de56bb446
-
   //Run fetchCoffees function when page loads
   useEffect(() => {
     fetchAllCoffees();
@@ -31,7 +30,7 @@ export default function Collection() {
   };
 
   //toggle active class based on what button is clicked
-  // inspired by the followinf sandbox:
+  // inspired by the following sandbox:
   //https://codesandbox.io/p/sandbox/priceless-tamas-yjr1lw?file=%2Fsrc%2FSome.js%3A24%2C16
   const changeColor = (btn) => {
     setSelected(btn);

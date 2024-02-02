@@ -33,6 +33,7 @@ p {
   font-size: 0.875rem;
   display: flex;
   justify-content: center;
+  gap: 1rem;
 }
 
 button {
